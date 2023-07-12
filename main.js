@@ -113,6 +113,8 @@ if(alumnos.credito){
     alumnos.promedio=(alumnospromedio+(alumnos.promedio*0.06))
 
 }
+console.log(alumnos.legajo);
+console.log(alumnos.promedio)
 }
 )
 
