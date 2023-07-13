@@ -1,3 +1,8 @@
+// el programa registra alumnos y su informacion, y los guarda en un array. 
+// Se puede realizar busquedas por deporte para encontrar que alumnos muestran coincidencias
+// si el alumno realizo tiene credito extra, se incrementa su promedio
+// (calculado a partir de notas ingresadas)
+
 // constructor de array Alumnos 
 
 let alumnos = []
@@ -54,20 +59,17 @@ function alumnoNuevo () {
         alumnos.push((nuevoAlumno));
 }
 
-
 // funcion para buscar deporte, devuelve que alumno(s) tiene coincidencias
+
 function buscarDeporte(){
         
     let busqueda = prompt("Ingrese valor a buscar")
     const coincidencia = alumnos.filter((alumnos) => alumnos.deporte.includes(busqueda))
     
     console.log(coincidencia) 
-
 }
 
-
 //  ejecucion
-
 
 do{
     alumnoNuevo();
@@ -81,13 +83,9 @@ do{
     }
     else{
         seguir= false
-        
     }
 }
 while(seguir)
-
-// HASTA ACA FUNCIONA PERFECTOOO
-
 
 // busqueda por deporte
 
@@ -103,18 +101,16 @@ do{
 }
 while(opc2=="si")
 
-
 // CREDITO EXTRA 
 // si el alumno hizo credito extra, se incrementa su promedio
 
 alumnos.forEach((alumnos)=>{
 
-if(alumnos.credito){
-    alumnos.promedio=(alumnospromedio+(alumnos.promedio*0.06))
-
-}
-console.log(alumnos.legajo);
-console.log(alumnos.promedio)
+    if(alumnos.credito){
+        alumnos.promedio=(alumnospromedio+(alumnos.promedio*0.06))
+    }
+    console.log(alumnos.legajo);
+    console.log(alumnos.promedio)
 }
 )
 
