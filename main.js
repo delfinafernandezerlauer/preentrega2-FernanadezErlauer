@@ -111,7 +111,7 @@ while ((opc2!=="si" && (opc2!=="no"))){
 alumnos.forEach((alumnos)=>{
 
     if(alumnos.credito){
-        alumnos.promedio=(alumnospromedio+(alumnos.promedio*0.06))
+        alumnos.promedio=(alumnos.promedio+(alumnos.promedio*0.06))
     }
     console.log(alumnos.legajo);
     console.log(alumnos.promedio)
