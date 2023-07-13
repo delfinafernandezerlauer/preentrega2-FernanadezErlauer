@@ -89,17 +89,21 @@ while(seguir)
 
 // busqueda por deporte
 
-do{
-    let opc2 = prompt("desea hacer una busqueda por deporte? si/no");
-    while ((opc2!=="si" && (opc2!=="no"))){
-        alert("ingrese si o no");
-        opc2 = prompt("desea hacer una busqueda por deporte? si/no");
-    }
-    if (opc2=="si"){
-        buscarDeporte()
-    }
+let opc2 = prompt("desea hacer una busqueda por deporte? si/no");
+
+while ((opc2!=="si" && (opc2!=="no"))){
+    alert("ingrese si o no");
+    opc2 = prompt("desea hacer una busqueda por deporte? si/no");
 }
-while(opc2=="si")
+
+    while(opc2=="si"){
+        buscarDeporte()
+        opc2 = prompt("desea hacer una busqueda por deporte? si/no");
+        while ((opc2!=="si" && (opc2!=="no"))){
+            alert("ingrese si o no");
+            opc2 = prompt("desea hacer una busqueda por deporte? si/no");
+        }      
+    }
 
 // CREDITO EXTRA 
 // si el alumno hizo credito extra, se incrementa su promedio
